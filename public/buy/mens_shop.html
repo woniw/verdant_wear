@@ -9,7 +9,7 @@
         <ul>
             <label for=""></label>
             <div class="left-half">
-                <li class="nav-bar-title"><a href="/public/views/index.html" id="nav_bar_title">Verdant Wear</a></li>
+                <li class="nav-bar-title"><a href="/public/home_page.html" id="nav_bar_title">Verdant Wear</a></li>
                 <li class="nav-bar-item-left"><a href="">Women</a></li>
                 <li class="nav-bar-item-left"><a href="">Men</a></li>
             </div>
@@ -24,7 +24,97 @@
     </nav>
     <title>Mens</title>
   </head>
+  <style>
+    .filter_section{
+      background-color: #D9D9D9;
+      height: 1000px;
+      width: 20%;
+      border-radius: 20px;
+    }
+    .product_section{
+      background-color: #D9D9D9;
+      height: 1000px;
+      width: 80%;
+      border-radius: 20px;
+    }
+    .container{
+      display: flex;
+      justify-content:flex-end
+    }
+    .filter_section_label{
+      font-size: x-large;
+      display: flex;
+      justify-content: center;
+      padding-top: 20px;
+    }
+    .filter_section_headers{
+      font-size: 20px;
+      padding-bottom: 15px;
+    }
+    .line_filter_divider{
+      padding-left: 30px;
+      color:#999999
+    }
+    .card{
+      height: 350px;
+      width: 150px;
+      background-color:#bcb8b1;
+      margin-left: 32px;
+      margin-right: 32px;
+      border-radius: 8px;
+      padding: 16px;
+    }
+    .trending_card_image{
+      height: 250px;
+      width: 150px;
+      border-radius: 8px;
+    }
+    .trending_section .card_title{
+      display: flex;
+      justify-content: center;
+      font-size: larger;
+      color: #353535;
+    }
+  </style>
   <body>
-    
+  <div class="container">
+      <div class="filter_section">
+        <label class="filter_section_label">Filter</label> <br>
+        <ul>
+          <li class="filter_section_headers">Color</li>
+          <li><input type="checkbox"> Red</li>
+          <li><input type="checkbox"> Blue</li>
+          <li><input type="checkbox"> Yellow</li>
+          <li><input type="checkbox"> Green</li>
+        </ul>
+          <div class="line_filter_divider">─────────────────</div>
+        <ul>
+          <li class="filter_section_headers">Categories</li>
+          <li><input type="checkbox"> Fashion</li>
+          <li><input type="checkbox"> Comfort</li>
+          <li><input type="checkbox"> Sports</li>
+        </ul>
+          <div class="line_filter_divider">─────────────────</div>
+        <ul>
+          <li class="filter_section_headers">Promotion</li>
+          <li><input type="checkbox"> On Sale</li>
+          <li><input type="checkbox"> Low Stock</li>
+          <li><input type="checkbox"> Holiday</li>
+        </ul>
+
+        <button class="button-style">Filter</button>
+      </div>
+      <div style="width: 10px;"></div>
+      <div class="product_section">
+        <div style="height: 20px;"></div>
+        <div class="card">
+            <img class="trending_card_image" src="/assets/home_page_card_images/green_sweater.avif" alt="">
+            <div style="height: 10px;"></div>
+            <label class="card_title"">Green Sweater</label>
+            <p class="card_info" style="color: #353535;">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            <div style="height: 10px;"></div>
+        </div>
+      </div>
+  </div>
   </body>
 </html>
