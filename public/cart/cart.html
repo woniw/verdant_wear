@@ -26,7 +26,8 @@
         .cart_container{
             background-color:#D9D9D9 ;
             width: 80%;
-            height: 1000px;
+            min-height: 700px;
+            height: fit-content;
             border-radius: 20px;
         }
         .centering{
@@ -37,10 +38,48 @@
             width: 350px;
             height: 600px;
             background-color: aqua;
-            margin-left: 65%;
+            margin-left: 45%;
             margin-top: 50px;
             border-radius: 20px;
         }
+
+        .example_item_image{
+            height: 150px;
+            width: 200px;
+            border-radius: 20px;
+        }
+        .example_item{
+            border-radius: 20px;
+            border-style: solid;
+            border-color: #353535;
+            padding: 10px;
+            height: 240px;
+            width: 200px;
+            margin: 20px;
+            padding-bottom: 20px;
+        }
+        .example_item_details{
+            color: #353535;
+        }
+        .header_container{
+            display: flex;
+        }
+        .header{
+            padding-right: 240px;
+            padding-left: 30px;
+            padding-top: 20px;
+            font-size: larger;
+        }
+        .cart_item_checkout_container{
+            display: flex;
+        }
+        .remove_item_container{
+            padding-top: 10px;
+        }
+        .cart_item_container{
+            display:flex;
+        }
+        .example_item{}
     </style>
     <title>Cart</title>
 </head>
@@ -48,13 +87,31 @@
     <label for="">Cart</label>
 <div class="centering">
     <div class="cart_container">
-        <table>
-            <th>Product</th>
-            <th>Quantity</th>
-            <th>Price</th>
-        </table>
-        <div class="checkout_container">
-            
+        <div class="header_container">
+            <label class="header">Product</label>
+            <label class="header">Quantity</label>
+            <label class="header">Price</label>
+
+        </div>
+        <div class="cart_item_checkout_container">
+            <div class="cart_item_container">
+                <div class="full_example_item">
+                    <div class="example_item_stat">
+                        <img class="example_item_image" src="/assets/home_page_card_images/green_vest.avif" alt="">
+                        <div class="example_item_details">
+                            <label class="example_item_details example_item_name">Green Vest</label><br>
+                            <label class="example_item_details example_item_price">Price: $29.99</label><br>
+                            <label class="example_item_details example_item_size">Size: Medium</label>
+                        </div>
+                        <div class="remove_item_container">
+                            <button class="button-style">Remove</button>
+                        </div>
+                    </div>
+                        <label for="">0</label>
+                        <label for="">29.99</label>
+                </div>
+            </div>
+            <div class="checkout_container"></div>
         </div>
     </div>
 </div>
