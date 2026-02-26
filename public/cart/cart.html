@@ -37,7 +37,7 @@
         .checkout_container{
             width: 350px;
             height: 600px;
-            background-color: aqua;
+            background-color: #c8c8c8;
             margin-left: 45%;
             margin-top: 50px;
             border-radius: 20px;
@@ -48,7 +48,7 @@
             width: 200px;
             border-radius: 20px;
         }
-        .example_item{
+        .example_item_stat{
             border-radius: 20px;
             border-style: solid;
             border-color: #353535;
@@ -70,6 +70,9 @@
             padding-top: 20px;
             font-size: larger;
         }
+        .checkout_header{
+            font-size: x-large;
+        }
         .cart_item_checkout_container{
             display: flex;
         }
@@ -79,12 +82,55 @@
         .cart_item_container{
             display:flex;
         }
-        .example_item{}
+        .full_example_item{
+            display: flex;
+        }
+        .example_item_numerical_container{
+            padding-top: 20px;
+        }
+        .stats{
+            position: absolute;
+            padding-top: 60px;
+            color: #353535;
+            font-size: larger;
+        }
+        .quantity{
+            padding-left: 25%;
+        }
+        .price{
+            padding-left: 45%;
+        }
+        .checkout_container_header_container{
+            display: flex;
+            justify-content: center;
+            padding-top: 20px;
+        }
+        .checkout_container_divider_container{
+            display: flex;
+            justify-content: center;
+        }
+        .purchase_info{
+            font-size: larger;
+            padding-left: 150px;
+        }
+        .checkout_button_container{
+            display: flex;
+            justify-content: center;
+        }
+        .cart_page_main_label{
+            font-size: xx-large;
+        }
+        .cart_label_container{
+            display: flex;
+            justify-content: center;
+        }
     </style>
     <title>Cart</title>
 </head>
 <body>
-    <label for="">Cart</label>
+    <div class="cart_label_container">
+        <label class="cart_page_main_label">Cart</label>
+    </div>
 <div class="centering">
     <div class="cart_container">
         <div class="header_container">
@@ -106,12 +152,42 @@
                         <div class="remove_item_container">
                             <button class="button-style">Remove</button>
                         </div>
-                    </div>
-                        <label for="">0</label>
-                        <label for="">29.99</label>
+                    </div class="example_item_numerical_container">
+                        <label class="stats quantity">0</label>
+                        <label class="stats price">$29.99</label>
                 </div>
             </div>
-            <div class="checkout_container"></div>
+            <div class="checkout_container">
+                <div class="checkout_container_header_container">
+                    <label class="checkout_header">Checkout</label>
+                </div>
+                <div class="checkout_container_divider_container">
+                    <div class="line_filter_divider">─────────────────</div>
+                </div>
+
+                <div class="total_info_container">
+                    <ul>
+                        <li class="purchase_info_label">Items:
+                            <label class="purchase_info">1</label>
+                        </li>
+                        <li class="purchase_info_label">Subtotal:
+                            <label class="purchase_info">$29.99</label>
+                        </li>
+                        <li class="purchase_info_label">Tax:
+                            <label class="purchase_info">$1.05</label>
+                        </li>
+                        <li class="purchase_info_label">Shipping:
+                            <label class="purchase_info">$20</label>
+                        </li>
+                    </ul>
+                <div class="checkout_container_divider_container">
+                    <div class="line_filter_divider">─────────────────</div>
+                </div>
+                <div class="checkout_button_container">
+                    <button class="button-style">checkout</button>
+                </div>
+                </div> 
+            </div>
         </div>
     </div>
 </div>
