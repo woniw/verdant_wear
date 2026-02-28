@@ -46,7 +46,6 @@ body{
     color: #353535;
 }
 
-
 .left-half .nav-bar-item-left{
     padding-top: 25px;
 }
@@ -70,4 +69,14 @@ body{
 }
 .line_filter_divider{
     color: #353535;
+}
+.input_boxes{
+    border-radius: 15px;
+    padding: 6px;
+    border-color: #353535;
+    font-size: 15px;
+}
+.centering{
+    display: flex;
+    justify-content: center;
 }

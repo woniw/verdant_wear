@@ -18,16 +18,15 @@
             </div>
             <div class="right-half">
                 <li class="nav-bar-item-right"><a href="/public/cart/cart.html" style="padding-right: 20px;"><i class="fa-solid fa-cart-shopping"></a></i></li>
-                <li class="nav-bar-item-right"><a href="/public/user/account.html"><i class="fa-solid fa-user"></i></a></li>
+                <li class="nav-bar-item-right"><a href="/public/user/login.html"><i class="fa-solid fa-user"></i></a></li>
             </div>
         </ul>
     </nav>
     <style>
         .account_container{
             background-color:#D9D9D9 ;
-            width: 50%;
-            min-height: 700px;
-            height: fit-content;
+            width: 30%;
+            height: 300px;
             border-radius: 20px;
         }
         .centering{
@@ -35,11 +34,21 @@
             justify-content: center;
         }
         .account_page_main_label{
+            color: #353535;
             font-size: xx-large;
         }
         .account_label_container{
             display: flex;
             justify-content: center;
+        }
+        .login_label_container{
+            display: flex;
+            justify-content: center;
+            padding-top: 20px;
+        }
+        .login_label{
+            color: #353535;
+            font-size: 40px;
         }
     </style>
     <title>Account</title>
@@ -50,7 +59,25 @@
     </div>
 <div class="centering">
     <div class="account_container">
-        
+        <div class="login_label_container">
+            <label class="login_label">Welcome</label>
+        </div>
+        <div style="height: 20px;"></div>
+        <div class="input_boxes_container">
+            <div style="display: flex; justify-content: center;">
+                <input class="input_boxes" type="text" placeholder="Email">
+            </div>
+                <div style="height: 7px;"></div>
+            <div style="display: flex; justify-content: center;">
+                <input class="input_boxes" type="text" placeholder="Password">
+            </div>
+            <div style="height: 15px;"></div>
+            <div style="display: flex; justify-content: center;">
+                <button class="button-style">Sign up</button>
+            </div>
+                <div style="display: flex; justify-content: center;">
+                <a href="/public/user/login.html">Login</a>
+            </div>
     </div>
 </div>
 </body>
