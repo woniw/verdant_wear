@@ -36,10 +36,12 @@
       height: 1000px;
       width: 80%;
       border-radius: 20px;
+      display: flex;
+      padding-top: 20px;
     }
     .container{
       display: flex;
-      justify-content:flex-end
+      justify-content:flex-end;
     }
     .filter_section_label{
       font-size: x-large;
@@ -107,14 +109,30 @@
       <div style="width: 10px;"></div>
       <div class="product_section">
         <div style="height: 20px;"></div>
-        <div class="card">
+        <div class="card" id="green_sweater_view">
             <img class="trending_card_image" src="/assets/home_page_card_images/green_sweater.avif" alt="">
             <div style="height: 10px;"></div>
             <label class="card_title"">Green Sweater</label>
             <p class="card_info" style="color: #353535;">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
             <div style="height: 10px;"></div>
         </div>
+        <div class="card" id="jeans_view">
+            <img class="trending_card_image" src="/assets/home_page_card_images/jeans.avif" alt="">
+            <div style="height: 10px;"></div>
+            <label class="card_title"">Jeans</label>
+            <p class="card_info" style="color: #353535;">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            <div style="height: 10px;"></div>
+        </div>
+        <div class="card" id="nike_view">
+            <img class="trending_card_image" src="/assets/home_page_card_images/nike_whatever.avif" alt="">
+            <div style="height: 10px;"></div>
+            <label class="card_title"">nike</label>
+            <p class="card_info" style="color: #353535;">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            <div style="height: 10px;"></div>
+        </div>
       </div>
   </div>
+
+  <script type="module" src="/public/buy/script/mens_shopping.js"></script>
   </body>
 </html>
