@@ -32,7 +32,7 @@
     height: fit-content;
     border-radius: 20px;
   }
-  .item_image{
+  #item_image{
     height: 700px;
     width: 450px;
     border-radius: 20px;
@@ -46,26 +46,26 @@
     height: 800px;
     padding-top: 20px;
   }
-  .item_label{
+  #item_label{
     font-size: x-large;
   }
   .description_text{
     padding: 20px;
   }
-  .price_label{
+  #price_label{
     padding:20px
   }
 </style>
 <body>
   <div class="centering">
     <div class="item_container">
-      <img class="item_image" alt="" src="/assets/home_page_card_images/green_cloak.avif">
+      <img id="item_image" alt="" src="/assets/mens_clothing/nike_whatever.avif">
       <div class="item_description_container">
         <div class="centering">
-          <label class="item_label">Green Coat</label>
+          <label id="item_label">Green Coat</label>
         </div>
-        <p class="description_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, corrupti harum. Voluptates molestiae exercitationem veniam officiis amet unde nulla quia quae facilis dolorum possimus quasi assumenda, consequuntur accusamus, corporis aut.</p>
-        <label class="price_label">Price: $29.99</label>
+        <p id="description_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, corrupti harum. Voluptates molestiae exercitationem veniam officiis amet unde nulla quia quae facilis dolorum possimus quasi assumenda, consequuntur accusamus, corporis aut.</p>
+        <label id="price_label">Price: $29.99</label>
         <div style="height: 20px;"></div>
         <div class="centering">
           <button class="button-style">Add To Cart</button>
@@ -73,5 +73,5 @@
       </div>
     </div>
   </div>
-  <script type="module" src="./script/mens_shopping.js"></script>
+  <script src="/utils/view_change.js"></script>
 </body>

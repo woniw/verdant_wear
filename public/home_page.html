@@ -196,6 +196,24 @@
         </div>
         </div>
     </div>
+
+    <script type="module">
+        import { add_user_data } from '/utils/new_user.js';
+        
+        console.log(localStorage)
+        if(!localStorage.getItem("hasRun")){ //if false/if it hasnt ran yet
+            localStorage.setItem("hasRun", "yes");
+            add_user_data()
+        }
+        else if(localStorage){};
+            
+        console.log(localStorage)
+        let clear_button = document.getElementById("clear_button");
+
+        clear_button.addEventListener("click", () => {
+            // window.alert("clearing all user data")
+            localStorage.clear()
+        })
+    </script>
 </body
-</body>
 </html>
