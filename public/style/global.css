@@ -80,3 +80,7 @@ body{
     display: flex;
     justify-content: center;
 }
+
+.break{
+    flex-basis: 100%;
+}

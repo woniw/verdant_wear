@@ -159,7 +159,7 @@
             <label class="card_title"">Green Sweater</label>
             <p class="card_info" style="color: #353535;">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
             <div style="height: 10px;"></div>
-            <button class="button-style"><a href="">Add To Cart</a></button>
+            <button class="button-style" id="add_nike_cart"><a href="">Add To Cart</a></button>
         </div>
     </span>
 
@@ -199,7 +199,13 @@
 
     <script type="module">
         import { add_user_data } from '/utils/new_user.js';
-        
+        import { add_to_cart } from '/utils/add_to_cart.js';
+        let data = JSON.parse(localStorage.getItem("user_data"));
+        let add_nike_cart = document.getElementById("add_nike_cart");
+
+        add_nike_cart.addEventListener("click", () => {
+            add_to_cart("Nike")
+        })
         console.log(localStorage)
         if(!localStorage.getItem("hasRun")){ //if false/if it hasnt ran yet
             localStorage.setItem("hasRun", "yes");
@@ -214,6 +220,8 @@
             // window.alert("clearing all user data")
             localStorage.clear()
         })
+
+
     </script>
 </body
 </html>

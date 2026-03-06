@@ -38,11 +38,11 @@
             width: 350px;
             height: 600px;
             background-color: #c8c8c8;
-            margin-left: 45%;
+            margin-left: 55%;
             margin-top: 50px;
             border-radius: 20px;
+            position: absolute;
         }
-
         .example_item_image{
             height: 150px;
             width: 200px;
@@ -73,14 +73,15 @@
         .checkout_header{
             font-size: x-large;
         }
-        .cart_item_checkout_container{
+        #cart_item_checkout_container{
             display: flex;
         }
         .remove_item_container{
             padding-top: 10px;
         }
-        .cart_item_container{
+        #cart_item_container{
             display:flex;
+            flex-wrap: wrap;
         }
         .full_example_item{
             display: flex;
@@ -139,8 +140,31 @@
             <label class="header">Price</label>
 
         </div>
-        <div class="cart_item_checkout_container">
-            <div class="cart_item_container">
+        <div id="cart_item_checkout_container">
+            <div id="cart_item_container">
+
+
+                <div class="full_example_item">
+                    <div class="example_item_stat">
+                        <img class="example_item_image" src="/assets/home_page_card_images/green_vest.avif" alt="">
+                        <div class="example_item_details">
+                            <label class="example_item_details example_item_name">Green Vest</label><br>
+                            <label class="example_item_details example_item_price">Price: $29.99</label><br>
+                            <label class="example_item_details example_item_size">Size: Medium</label>
+                        </div>
+                        <div class="remove_item_container">
+                            <button class="button-style">Remove</button>
+                        </div>
+                        </div class="example_item_numerical_container">
+                            <label class="stats quantity">1</label>
+                            <label class="stats price">$29.99</label>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="break"></div>
+                
                 <div class="full_example_item">
                     <div class="example_item_stat">
                         <img class="example_item_image" src="/assets/home_page_card_images/green_vest.avif" alt="">
@@ -153,7 +177,6 @@
                             <button class="button-style">Remove</button>
                         </div>
                     </div class="example_item_numerical_container">
-                        <div id="add-quantity">+</div>
                         <label class="stats quantity">1</label>
                         <label class="stats price">$29.99</label>
                 </div>
@@ -192,5 +215,6 @@
         </div>
     </div>
 </div>
+<script type="module" src="cart_javascript.js"></script>
 </body>
 </html>

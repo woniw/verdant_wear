@@ -12,7 +12,7 @@ let view_black_shirt_view = document.getElementById("black_shirt_view");
 let view_yellow_shirt = document.getElementById("yellow_shirt_view");
 let view_mona_lisa_shirt = document.getElementById("mona_lisa_shirt_view");
 let view_camo_shorts = document.getElementById("camo_shorts_view");
-
+// not very pretty code :(
 view_beans_hoodie.addEventListener("click", () => {locate_clothing("Beans Hoodie"); window.location.replace('/public/buy/view_item.html');})
 view_black_shirt_design.addEventListener("click", () => {locate_clothing("Black Shirt With Design"); window.location.replace('/public/buy/view_item.html');})
 view_black_suit.addEventListener("click", () => {locate_clothing("Black Suit"); window.location.replace('/public/buy/view_item.html');})
