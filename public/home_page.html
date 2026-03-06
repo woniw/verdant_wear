@@ -135,28 +135,28 @@
             <label class="card_title"">Green Sweater</label>
             <p class="card_info" style="color: #353535;">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
             <div style="height: 10px;"></div>
-            <button class="button-style"><a href="">Add To Cart</a></button>
+            <button class="button-style" id="Green_Sweater"><a href="">Add To Cart</a></button>
         </div>
         <div class="card">
             <img class="trending_card_image" src="/assets/home_page_card_images/jeans.avif" alt="">
             <div style="height: 10px;"></div>
-            <label class="card_title"">Green Sweater</label>
+            <label class="card_title"">Jeans</label>
             <p class="card_info" style="color: #353535;">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
             <div style="height: 10px;"></div>
-            <button class="button-style"><a href="">Add To Cart</a></button>
+            <button class="button-style" id="Jeans"><a href="">Add To Cart</a></button>
         </div>
         <div class="card">
             <img class="trending_card_image" src="/assets/home_page_card_images/blue_hoodie.avif" alt="">
             <div style="height: 10px;"></div>
-            <label class="card_title"">Green Sweater</label>
+            <label class="card_title"">Blue Hoodie</label>
             <p class="card_info" style="color: #353535;">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
             <div style="height: 10px;"></div>
-            <button class="button-style"><a href="">Add To Cart</a></button>
+            <button class="button-style" id="add_blue_hoodie"><a href="">Add To Cart</a></button>
         </div>
         <div class="card">
             <img class="trending_card_image" src="/assets/home_page_card_images/nike_whatever.avif" alt="">
             <div style="height: 10px;"></div>
-            <label class="card_title"">Green Sweater</label>
+            <label class="card_title"">Nike</label>
             <p class="card_info" style="color: #353535;">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
             <div style="height: 10px;"></div>
             <button class="button-style" id="add_nike_cart"><a href="">Add To Cart</a></button>
@@ -202,10 +202,15 @@
         import { add_to_cart } from '/utils/add_to_cart.js';
         let data = JSON.parse(localStorage.getItem("user_data"));
         let add_nike_cart = document.getElementById("add_nike_cart");
+        let add_blue_hoodie = document.getElementById("add_blue_hoodie");
+        let add_jeans = document.getElementById("Jeans");
+        let add_green_sweater = document.getElementById("Green_Sweater");
 
-        add_nike_cart.addEventListener("click", () => {
-            add_to_cart("Nike")
-        })
+        add_nike_cart.addEventListener("click", () => {add_to_cart("Nike")});
+        add_blue_hoodie.addEventListener("click", () => {add_to_cart("Blue Hoodie")});
+        add_jeans.addEventListener("click", () => {add_to_cart("Jeans")})
+        add_green_sweater.addEventListener("click", () => {add_to_cart("Green_Sweater")})
+        
         console.log(localStorage)
         if(!localStorage.getItem("hasRun")){ //if false/if it hasnt ran yet
             localStorage.setItem("hasRun", "yes");
