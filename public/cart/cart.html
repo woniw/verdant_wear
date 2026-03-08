@@ -25,19 +25,18 @@
     <style>
         .cart_container{
             background-color:#D9D9D9 ;
-            width: 85%;
+            width: 50%;
             min-height: 700px;
             height: fit-content;
             border-radius: 20px;
         }
         .checkout_container{
             width: 350px;
-            height: 600px;
             background-color: #c8c8c8;
-            margin-left: 55%;
-            margin-bottom: 70%;
-            margin-top: 50px;
             border-radius: 20px;
+            padding: 20px;
+            height: fit-content;
+            margin-left: 20%;
             position: absolute;
         }
         .example_item_image{
@@ -92,12 +91,7 @@
             color: #353535;
             font-size: larger;
         }
-        .quantity{
-            padding-left: 25%;
-        }
-        .price{
-            padding-left: 45%;
-        }
+
         .checkout_container_header_container{
             display: flex;
             justify-content: center;
@@ -108,8 +102,9 @@
             justify-content: center;
         }
         .purchase_info{
-            font-size: larger;
-            padding-left: 150px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
         }
         .checkout_button_container{
             display: flex;
@@ -122,7 +117,19 @@
             display: flex;
             justify-content: center;
         }
-        
+
+        #cart_item_checkout_container {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        .purchase_info_label {
+            display: flex;               
+            justify-content: space-between; 
+            margin-bottom: 10px; 
+            padding-right: 90px;       
+        }
+
     </style>
     <title>Cart</title>
 </head>
@@ -134,8 +141,6 @@
     <div class="cart_container">
         <div class="header_container">
             <label class="header">Product</label>
-            <label class="header">Quantity</label>
-            <label class="header">Price</label>
 
         </div>
         <div id="cart_item_checkout_container">
@@ -149,20 +154,21 @@
                 </div>
 
                 <div class="total_info_container">
-                    <ul>
-                        <li class="purchase_info_label">Items:
-                            <label class="purchase_info">1</label>
-                        </li>
-                        <li class="purchase_info_label">Subtotal:
-                            <label class="purchase_info">$29.99</label>
-                        </li>
-                        <li class="purchase_info_label">Tax:
-                            <label class="purchase_info">$1.05</label>
-                        </li>
-                        <li class="purchase_info_label">Shipping:
-                            <label class="purchase_info">$20</label>
-                        </li>
-                    </ul>
+                <ul>
+                    <li class="purchase_info_label">Items:
+                        <label class="purchase_info" id="items_label">0</label>
+                    </li>
+                    <li class="purchase_info_label">Subtotal:
+                        <label class="purchase_info" id="subtotal_label">$0.00</label>
+                    </li>
+                    <li class="purchase_info_label">Tax:
+                        <label class="purchase_info" id="tax_label">$0.00</label>
+                    </li>
+                    <li class="purchase_info_label">Shipping:
+                        <label class="purchase_info" id="shipping_label">$0.00</label>
+                    </li>
+                </ul>
+
                 <div class="checkout_container_divider_container">
                     <div class="line_filter_divider">─────────────────</div>
                 </div>

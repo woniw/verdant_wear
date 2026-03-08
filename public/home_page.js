@@ -1,5 +1,7 @@
 import { add_user_data } from '/utils/new_user.js';
 import { add_to_cart } from '/utils/add_to_cart.js';
+import { clothing_list} from '../utils/clothing.js'
+
 let data = JSON.parse(localStorage.getItem("user_data"));
 let add_nike_cart = document.getElementById("add_nike_cart");
 let add_blue_hoodie = document.getElementById("add_blue_hoodie");
@@ -17,15 +19,18 @@ function recently_viewed_element_creation() {
     const recently_viewed_label_container = document.createElement("div")
     const recently_viewed_label = document.createElement("label")
     const recently_viewed_section = document.createElement("span")
+    const t_px_gap   = document.createElement("div")
 
 
     recently_viewed_label_container.classList = ["recently_viewed_label_container"]
     recently_viewed_label.classList = ["recently_viewed_label"]
     recently_viewed_section.classList = ["recently_viewed_section"]
 
+    t_px_gap.style.height = "20px";
 
     recently_viewed_container.appendChild(recently_viewed_label_container)
-    recently_viewed_label_container.appendChild(recently_viewed_label)  
+    recently_viewed_label_container.appendChild(recently_viewed_label) 
+    recently_viewed_container.appendChild(t_px_gap)
     recently_viewed_container.appendChild(recently_viewed_section)
 
 
@@ -62,8 +67,6 @@ function card_creation(recently_viewed_section, item_path, item_desc, item_name)
     card_title.textContent = item_name
 }
 
-
-
 console.log(localStorage)
 if(!localStorage.getItem("hasRun")){ //if false/if it hasnt ran yet
     localStorage.setItem("hasRun", "yes");
@@ -81,6 +84,18 @@ clear_button.addEventListener("click", () => {
 if (data["recently_viewed"].length >= 1) {
     console.log("recently viewed label has reached an index of 1 or higher")
     let card_paramter_req = recently_viewed_element_creation()
+
+    for (let index = 0; index < data["recently_viewed"].length; index++) {
+        let item_name = data["recently_viewed"][index]
+        console.log(item_name)
+        let clothing_item = clothing_list.find(item => item["name"] == item_name)
+        if (!clothing_item) continue
+
+        let item_path = clothing_item["img_path"];
+        let item_desc = clothing_item["description"];
+
+        card_creation(card_paramter_req, item_path, item_desc, item_name)
+    }
 } else {
     console.log("recently viewed label has not reached an index of 1 or higher")
 }

@@ -3,6 +3,20 @@ import { locate_clothing } from "../../../utils/locate_clothing.js";
 
 let data = JSON.parse(localStorage.getItem("user_data"));
 
+// Ensure current_viewing exists
+if (!data["current_viewing"]) {
+    data["current_viewing"] = {
+        "item_name": "",
+        "img_path": "",
+        "description": "",
+        "price": 0,
+        "stock": 0,
+        "view": ""
+    };
+}
+
+localStorage.setItem("user_data", JSON.stringify(data));
+
 function card_creation(item_path, item_desc, item_name, item_view_id) {
     let product_section = document.getElementById("product_section");
     const ff_px_gap  = document.createElement("div");
@@ -36,16 +50,28 @@ function card_creation(item_path, item_desc, item_name, item_view_id) {
     return item_card;
 }
 
-for (let count = 1; count < clothing_list.length; count++) {
-    let item_name = clothing_list[count].name;
-    let item_path = clothing_list[count].img_path;
-    let item_desc = clothing_list[count].description;
-    let item_view_id = clothing_list[count].view;
+data["filtered_clothes"].forEach(item_name => {
+    let clothing_item = clothing_list.find(clothing => clothing.name === item_name);
+    if (!clothing_item) return;
 
-    let item_card = card_creation(item_path, item_desc, item_name, item_view_id);
+    let item_card = card_creation(
+        clothing_item.img_path,
+        clothing_item.description,
+        item_name,
+        clothing_item.view
+    );
 
     item_card.addEventListener("click", () => {
-        locate_clothing(item_name);
+        data["current_viewing"] = {
+            "item_name": clothing_item.name,
+            "img_path": clothing_item.img_path,
+            "description": clothing_item.description,
+            "price": clothing_item.price,
+            "stock": clothing_item.stock,
+            "view": clothing_item.view
+        };
+        data["filtered_clothes"] = [];
+        localStorage.setItem("user_data", JSON.stringify(data));
         window.location.replace('/public/buy/view_item.html');
     });
-}
+});
