@@ -1,4 +1,5 @@
 import { clothing_list } from '../../../utils/clothing.js'
+import { add_to_cart } from '/utils/add_to_cart.js';
 
 let data = JSON.parse(localStorage.getItem("user_data"));
 
