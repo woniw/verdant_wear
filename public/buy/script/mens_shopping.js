@@ -37,10 +37,10 @@ function card_creation(item_path, item_desc, item_name, item_view_id) {
 }
 
 for (let count = 1; count < clothing_list.length; count++) {
-    let item_name = clothing_list[count].name;
-    let item_path = clothing_list[count].img_path;
-    let item_desc = clothing_list[count].description;
-    let item_view_id = clothing_list[count].view;
+    let item_name = clothing_list[count]["name"];
+    let item_path = clothing_list[count]["img_path"];
+    let item_desc = clothing_list[count]["description"];
+    let item_view_id = clothing_list[count]["view"];
 
     let item_card = card_creation(item_path, item_desc, item_name, item_view_id);
 

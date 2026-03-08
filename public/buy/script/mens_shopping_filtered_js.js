@@ -2,19 +2,6 @@ import { clothing_list } from '../../../utils/clothing.js';
 import { locate_clothing } from "../../../utils/locate_clothing.js";
 
 let data = JSON.parse(localStorage.getItem("user_data"));
-
-// Ensure current_viewing exists
-if (!data["current_viewing"]) {
-    data["current_viewing"] = {
-        "item_name": "",
-        "img_path": "",
-        "description": "",
-        "price": 0,
-        "stock": 0,
-        "view": ""
-    };
-}
-
 localStorage.setItem("user_data", JSON.stringify(data));
 
 function card_creation(item_path, item_desc, item_name, item_view_id) {
@@ -51,24 +38,24 @@ function card_creation(item_path, item_desc, item_name, item_view_id) {
 }
 
 data["filtered_clothes"].forEach(item_name => {
-    let clothing_item = clothing_list.find(clothing => clothing.name === item_name);
+    let clothing_item = clothing_list.find(clothing => clothing["name"] === item_name);
     if (!clothing_item) return;
 
     let item_card = card_creation(
-        clothing_item.img_path,
-        clothing_item.description,
+        clothing_item["img_path"],
+        clothing_item["description"],
         item_name,
-        clothing_item.view
+        clothing_item["view"]
     );
 
     item_card.addEventListener("click", () => {
         data["current_viewing"] = {
-            "item_name": clothing_item.name,
-            "img_path": clothing_item.img_path,
-            "description": clothing_item.description,
-            "price": clothing_item.price,
-            "stock": clothing_item.stock,
-            "view": clothing_item.view
+            "item_name": clothing_item["name"],
+            "img_path": clothing_item["img_path"],
+            "description": clothing_item["description"],
+            "price": clothing_item["price"],
+            "stock": clothing_item["stock"],
+            "view": clothing_item["view"]
         };
         data["filtered_clothes"] = [];
         localStorage.setItem("user_data", JSON.stringify(data));
