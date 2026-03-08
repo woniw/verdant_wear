@@ -1,0 +1,125 @@
+.cart_container {
+    background-color: #D9D9D9;
+    width: 50%;
+    min-height: 700px;
+    height: fit-content;
+    border-radius: 20px;
+}
+
+.checkout_container {
+    width: 350px;
+    background-color: #c8c8c8;
+    border-radius: 20px;
+    padding: 20px;
+    height: fit-content;
+    margin-left: 20%;
+    position: absolute;
+}
+
+.example_item_image {
+    height: 150px;
+    width: 200px;
+    border-radius: 20px;
+}
+
+.example_item_stat {
+    border-radius: 20px;
+    border-style: solid;
+    border-color: #353535;
+    padding: 10px;
+    height: 240px;
+    width: 200px;
+    margin: 20px;
+    padding-bottom: 20px;
+}
+
+.example_item_details {
+    color: #353535;
+}
+
+.header_container {
+    display: flex;
+}
+
+.header {
+    padding-right: 240px;
+    padding-left: 30px;
+    padding-top: 20px;
+    font-size: larger;
+}
+
+.checkout_header {
+    font-size: x-large;
+}
+
+#cart_item_checkout_container {
+    display: flex;
+}
+
+.remove_item_container {
+    padding-top: 10px;
+}
+
+#cart_item_container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.full_example_item {
+    display: flex;
+}
+
+.example_item_numerical_container {
+    padding-top: 20px;
+}
+
+.stats {
+    position: absolute;
+    padding-top: 60px;
+    color: #353535;
+    font-size: larger;
+}
+
+.checkout_container_header_container {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.checkout_container_divider_container {
+    display: flex;
+    justify-content: center;
+}
+
+.purchase_info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.checkout_button_container {
+    display: flex;
+    justify-content: center;
+}
+
+.cart_page_main_label {
+    font-size: xx-large;
+}
+
+.cart_label_container {
+    display: flex;
+    justify-content: center;
+}
+
+#cart_item_checkout_container {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.purchase_info_label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding-right: 90px;
+}
